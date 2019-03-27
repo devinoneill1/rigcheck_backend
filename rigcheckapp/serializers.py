@@ -5,6 +5,5 @@ from .models import *
 class TaskSerializer(serializers.ModelSerializer):
     class Meta:
         model = Task
-
-
-fields = ['id', 'postTitle', 'postBody', 'postDate']
+        fields = ['id', 'complete', 'day', 'station', 'shift']
+        depth = 1
